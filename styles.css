@@ -1,0 +1,220 @@
+:root {
+    --electric-blue: #00eaff;
+    --deep-blue: #001f3f;
+    --light-blue: #39d2ff;
+    --cyan-blue: #00bfff;
+    --dark-gray: #121212;
+    --text-color: #ffffff;
+    --header-bg: rgba(0, 31, 63, 0.9);
+    --header-border: #00bfff;
+    --nav-hover: #39d2ff;
+    --sub-menu-bg: #001f3f;
+    --sub-menu-border: #00eaff;
+    --hero-title-color: #00eaff;
+    --hero-text-shadow: 0 0 10px #39d2ff, 0 0 20px #00eaff;
+    --warning-bg: rgba(0, 31, 63, 0.8);
+    --warning-text: #00eaff;
+    --warning-border: #00bfff;
+    --card-bg: #001f3f;
+    --card-border: #00eaff;
+    --card-text: #39d2ff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+    background: linear-gradient(135deg, var(--deep-blue), var(--electric-blue), var(--dark-gray));
+    color: var(--text-color);
+    overflow-x: hidden;
+    padding: 0 2rem; /* Abstand zu den Seitenrändern */
+}
+
+header {
+    background: var(--header-bg);
+    border-bottom: 2px solid var(--header-border);
+    padding: 1rem 2rem; /* Einheitliche Padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px var(--header-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--electric-blue);
+    text-shadow: var(--hero-text-shadow);
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul > li {
+    position: relative;
+    color: var(--electric-blue);
+}
+
+nav ul > li:hover > ul {
+    display: block;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    background: var(--sub-menu-bg);
+    border: 1px solid var(--sub-menu-border);
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--sub-menu-border);
+    top: 100%;
+    left: 0;
+    z-index: 999;
+}
+
+nav ul ul li {
+    padding: 0.5rem 1rem;
+    color: var(--electric-blue);
+    white-space: nowrap;
+}
+
+nav ul ul li:hover {
+    color: var(--nav-hover);
+    text-shadow: 0 0 5px var(--nav-hover);
+}
+
+nav ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--hero-title-color);
+    background: url('cyberpunk_city.jpg') center/cover no-repeat;
+    position: relative;
+    padding: 0 2rem; /* Abstand links und rechts */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    text-shadow: var(--hero-text-shadow);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.warning {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: var(--warning-bg);
+    color: var(--warning-text);
+    border: 2px solid var(--warning-border);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--warning-border);
+    position: relative;
+    z-index: 2;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(0, 31, 63, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
+}
+
+.creator-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00eaff;
+    box-shadow: 0 0 10px #00eaff;
+}
+
+.creator-info {
+    color: #39d2ff;
+}
+
+.creator-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.creator-info p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.creator-info .discord {
+    font-weight: bold;
+    color: #00eaff;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem; /* Abstand links und rechts */
+}
+
+.feature-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border: 2px solid var(--card-border);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px var(--card-border);
+    color: var(--card-text);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px var(--card-border);
+}
+
+footer {
+    background: var(--dark-gray);
+    color: var(--electric-blue);
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1rem;
+}
