@@ -52,6 +52,35 @@ header h1 {
     margin: 0;
 }
 
+/* Allgemeine Link-Stile */
+a {
+    color: var(--electric-blue); /* Helles Neonblau für Cyberpunk-Stil */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover- und Fokus-Effekte */
+a:hover, a:focus {
+    color: var(--light-blue); /* Helleres Blau bei Hover */
+    text-shadow: 0 0 8px var(--electric-blue), 0 0 15px var(--light-blue);
+}
+
+/* Links in der Navigation */
+nav ul li a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: rgba(0, 31, 63, 0.5); /* Halbtransparenter Hintergrund */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-Effekt für Navigationslinks */
+nav ul li a:hover {
+    background: rgba(0, 31, 63, 0.8);
+    box-shadow: 0 0 10px var(--electric-blue), 0 0 20px var(--light-blue);
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -156,44 +185,6 @@ nav ul ul ul {
     box-shadow: 0 0 10px var(--warning-border);
     position: relative;
     z-index: 2;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    background: rgba(0, 31, 63, 0.8);
-    padding: 2rem;
-    border-radius: 10px;
-    border: 2px solid #00eaff;
-    box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
-}
-
-.creator-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #00eaff;
-    box-shadow: 0 0 10px #00eaff;
-}
-
-.creator-info {
-    color: #39d2ff;
-}
-
-.creator-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.creator-info p {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-}
-
-.creator-info .discord {
-    font-weight: bold;
-    color: #00eaff;
 }
 
 .features {
