@@ -28,13 +28,13 @@ body {
     background: linear-gradient(135deg, var(--deep-blue), var(--electric-blue), var(--dark-gray));
     color: var(--text-color);
     overflow-x: hidden;
-    padding: 0 2rem; /* Abstand zu den Seitenrändern */
+    padding: 0 2rem;
 }
 
 header {
     background: var(--header-bg);
     border-bottom: 2px solid var(--header-border);
-    padding: 1rem 2rem; /* Einheitliche Padding */
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,33 +52,15 @@ header h1 {
     margin: 0;
 }
 
-/* Allgemeine Link-Stile */
 a {
-    color: var(--electric-blue); /* Helles Neonblau für Cyberpunk-Stil */
+    color: var(--electric-blue);
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Hover- und Fokus-Effekte */
 a:hover, a:focus {
-    color: var(--light-blue); /* Helleres Blau bei Hover */
+    color: var(--light-blue);
     text-shadow: 0 0 8px var(--electric-blue), 0 0 15px var(--light-blue);
-}
-
-/* Links in der Navigation */
-nav ul li a {
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    background: rgba(0, 31, 63, 0.5); /* Halbtransparenter Hintergrund */
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover-Effekt für Navigationslinks */
-nav ul li a:hover {
-    background: rgba(0, 31, 63, 0.8);
-    box-shadow: 0 0 10px var(--electric-blue), 0 0 20px var(--light-blue);
 }
 
 nav ul {
@@ -94,10 +76,6 @@ nav ul {
 nav ul > li {
     position: relative;
     color: var(--electric-blue);
-}
-
-nav ul > li:hover > ul {
-    display: block;
 }
 
 nav ul ul {
@@ -116,35 +94,13 @@ nav ul ul {
     transform: translateY(-10px);
 }
 
-nav ul > li:hover > ul {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-nav ul ul li {
-    padding: 0.5rem 1rem;
-    color: var(--electric-blue);
-    white-space: nowrap;
-}
-
-nav ul ul li:hover {
-    color: var(--nav-hover);
-    text-shadow: 0 0 5px var(--nav-hover);
-}
-
-nav ul ul ul {
-    left: 100%;
-    top: 0;
-}
-
-/* Main Styling */
 main {
     padding: 2rem;
-    background: rgba(0, 31, 63, 0.8); /* Leicht transparenter Hintergrund */
+    background: rgba(0, 31, 63, 0.8);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
     margin: 1rem auto;
-    max-width: 1200px; /* Begrenzung der Breite */
+    max-width: 1200px;
 }
 
 .hero {
@@ -157,7 +113,7 @@ main {
     color: var(--hero-title-color);
     background: url('cyberpunk_city.jpg') center/cover no-repeat;
     position: relative;
-    padding: 0 2rem; /* Abstand links und rechts */
+    padding: 0 2rem;
 }
 
 .hero::before {
@@ -177,160 +133,61 @@ main {
     text-shadow: var(--hero-text-shadow);
 }
 
-.hero p {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-}
-
-.warning {
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    background: var(--warning-bg);
-    color: var(--warning-text);
-    border: 2px solid var(--warning-border);
-    border-radius: 10px;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    box-shadow: 0 0 10px var(--warning-border);
-    position: relative;
-    z-index: 2;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    background: rgba(0, 31, 63, 0.8);
-    padding: 2rem;
-    border-radius: 10px;
-    border: 2px solid #00eaff;
-    box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
-}
-
-.creator-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #00eaff;
-    box-shadow: 0 0 10px #00eaff;
-    object-fit: cover;
-}
-
-.creator-info {
-    color: #39d2ff;
-    flex: 1; /* Sorgt für gleichmäßige Verteilung mit dem Bild */
-}
-
-.creator-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.creator-info p {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-}
-
-.creator-info .discord {
-    font-weight: bold;
-    color: #00eaff;
-}
-
-
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 0 2rem; /* Abstand links und rechts */
+    padding: 0 2rem;
 }
 
-.feature-card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border: 2px solid var(--card-border);
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 20px var(--card-border);
-    color: var(--card-text);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .features {
+        gap: 1.5rem;
+    }
 }
 
-.feature-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px var(--electric-blue);
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
 }
 
-section {
-    margin: 2rem 0;
-    padding: 2rem;
-    background: rgba(0, 31, 63, 0.9); /* Halbtransparenter Hintergrund */
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 234, 255, 0.5); /* Leichtes Glühen */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+@media (max-width: 480px) {
+    body {
+        padding: 0 1rem;
+    }
 
-section:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 25px rgba(0, 234, 255, 0.7);
-}
+    header {
+        padding: 0.5rem 1rem;
+    }
 
-section h2 {
-    font-size: 2rem;
-    color: var(--electric-blue);
-    text-shadow: 0 0 10px var(--light-blue), 0 0 20px var(--electric-blue);
-    margin-bottom: 1rem;
-    text-align: center;
-}
+    header h1 {
+        font-size: 1.2rem;
+    }
 
-section ol, section ul {
-    margin: 0;
-    padding-left: 1.5rem;
-    list-style: none;
-}
+    .hero h2 {
+        font-size: 1.5rem;
+    }
 
-section ol li, section ul li {
-    margin: 1rem 0;
-    padding: 0.5rem;
-    background: rgba(0, 31, 63, 0.7);
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 234, 255, 0.5);
-}
-
-section ol li:hover, section ul li:hover {
-    background: rgba(0, 31, 63, 0.8);
-    box-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
-}
-
-section ol li::marker, section ul li::marker {
-    font-size: 1.2rem;
-    color: var(--light-blue);
-}
-
-section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: var(--text-color);
-    text-align: justify;
-}
-
-footer {
-    background: var(--dark-gray);
-    color: var(--electric-blue);
-    padding: 1rem 2rem;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.social-links a {
-    margin: 0 0.5rem;
-    color: var(--electric-blue);
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--light-blue);
-    text-shadow: 0 0 5px var(--light-blue);
+    main {
+        padding: 1rem;
+    }
 }
