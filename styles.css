@@ -137,6 +137,16 @@ nav ul ul ul {
     top: 0;
 }
 
+/* Main Styling */
+main {
+    padding: 2rem;
+    background: rgba(0, 31, 63, 0.8); /* Leicht transparenter Hintergrund */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+    margin: 1rem auto;
+    max-width: 1200px; /* Begrenzung der Breite */
+}
+
 .hero {
     height: 90vh;
     display: flex;
@@ -186,6 +196,47 @@ nav ul ul ul {
     position: relative;
     z-index: 2;
 }
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(0, 31, 63, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
+}
+
+.creator-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00eaff;
+    box-shadow: 0 0 10px #00eaff;
+    object-fit: cover;
+}
+
+.creator-info {
+    color: #39d2ff;
+    flex: 1; /* Sorgt für gleichmäßige Verteilung mit dem Bild */
+}
+
+.creator-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.creator-info p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.creator-info .discord {
+    font-weight: bold;
+    color: #00eaff;
+}
+
 
 .features {
     display: grid;
