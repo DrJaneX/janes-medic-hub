@@ -63,6 +63,11 @@ a:hover, a:focus {
     text-shadow: 0 0 8px var(--electric-blue), 0 0 15px var(--light-blue);
 }
 
+nav {
+    position: relative;
+    z-index: 1100;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -88,10 +93,35 @@ nav ul ul {
     box-shadow: 0 0 10px var(--sub-menu-border);
     top: 100%;
     left: 0;
-    z-index: 999;
+    z-index: 1200;
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(-10px);
+}
+
+nav ul > li:hover > ul {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav ul ul li {
+    position: relative;
+    padding: 0.5rem;
+}
+
+nav ul ul ul {
+    top: 0;
+    left: 100%;
+    margin-left: 0.5rem;
+    transform: translateX(0);
+    opacity: 0;
+}
+
+nav ul ul li:hover > ul {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 main {
