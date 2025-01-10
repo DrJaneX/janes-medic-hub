@@ -140,6 +140,59 @@ main {
     padding: 0 2rem;
 }
 
+section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(0, 31, 63, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(0, 234, 255, 0.7);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--electric-blue);
+    text-shadow: 0 0 10px var(--light-blue), 0 0 20px var(--electric-blue);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+section ol, section ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+section ol li, section ul li {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: rgba(0, 31, 63, 0.7);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 234, 255, 0.5);
+}
+
+section ol li:hover, section ul li:hover {
+    background: rgba(0, 31, 63, 0.8);
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+}
+
+section ol li::marker, section ul li::marker {
+    font-size: 1.2rem;
+    color: var(--light-blue);
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    text-align: justify;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .hero h2 {
@@ -148,6 +201,10 @@ main {
 
     .features {
         gap: 1.5rem;
+    }
+
+    section {
+        padding: 1.5rem;
     }
 }
 
@@ -167,6 +224,11 @@ main {
 
     .features {
         grid-template-columns: 1fr;
+    }
+
+    section {
+        margin: 1rem 0;
+        padding: 1rem;
     }
 }
 
@@ -189,5 +251,9 @@ main {
 
     main {
         padding: 1rem;
+    }
+
+    section {
+        padding: 0.5rem;
     }
 }
