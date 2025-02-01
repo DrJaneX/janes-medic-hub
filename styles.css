@@ -223,6 +223,26 @@ section p {
     text-align: justify;
 }
 
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Abstand zwischen Bild und Text */
+}
+
+.creator-image img {
+    width: 100px; /* Größe des Bildes */
+    height: 100px; /* Höhe gleich Breite für Rundung */
+    border-radius: 50%; /* Rundes Bild */
+    object-fit: cover; /* Stellt sicher, dass das Bild nicht verzerrt wird */
+    border: 2px solid var(--electric-blue); /* Rahmen für visuelle Trennung */
+}
+
+.creator-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
 table {
     width: 100%;
     border-collapse: collapse;
