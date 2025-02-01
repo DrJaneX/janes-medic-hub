@@ -147,7 +147,7 @@ main {
     justify-content: center;
     text-align: center;
     color: var(--hero-title-color);
-    background: url('cyberpunk_city.jpg') center/cover no-repeat;
+    background: url('GTA_CITY_CYBERPUNK.png') center/cover no-repeat;
     position: relative;
     padding: 0 2rem;
 }
@@ -159,14 +159,25 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5); /* Verdunkelung für besseren Textkontrast */
+    backdrop-filter: blur(5px); /* Hintergrund bleibt unscharf */
     z-index: 1;
 }
 
 .hero h2 {
     font-size: 3rem;
-    text-shadow: var(--hero-text-shadow);
+    text-shadow: 0 0 5px var(--electric-blue), 0 0 10px var(--light-blue); /* Schärferer Neon-Effekt */
+    color: var(--electric-blue);
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-shadow: none; /* Entfernt Unschärfe für klare Lesbarkeit */
+    position: relative;
+    z-index: 2;
 }
 
 .features {
