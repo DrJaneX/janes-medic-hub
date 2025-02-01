@@ -133,6 +133,12 @@ main {
     max-width: 1200px;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 .hero {
     height: 90vh;
     display: flex;
@@ -164,11 +170,32 @@ main {
 }
 
 .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
-    padding: 0 2rem;
 }
+
+.feature-card {
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--card-border);
+    text-align: center;
+    width: 300px; /* Fixe Breite für die Karten */
+    min-height: 180px; /* Mindesthöhe */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--electric-blue);
+} 
 
 section {
     margin: 2rem 0;
