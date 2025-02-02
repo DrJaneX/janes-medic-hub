@@ -11,10 +11,6 @@
     --nav-hover: #39d2ff;
     --sub-menu-bg: #001f3f;
     --sub-menu-border: #00eaff;
-    --hero-title-color: #00eaff;
-    --hero-text-shadow: 0 0 10px #39d2ff, 0 0 20px #00eaff;
-    --card-bg: #001f3f;
-    --card-border: #00eaff;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap');
@@ -28,7 +24,6 @@ body {
     padding: 0 2rem;
 }
 
-
 /* Header */
 header {
     background: var(--header-bg);
@@ -36,7 +31,7 @@ header {
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -46,19 +41,8 @@ header {
 header h1 {
     font-size: 2rem;
     color: var(--electric-blue);
-    text-shadow: var(--hero-text-shadow);
+    text-shadow: 0 0 10px var(--light-blue);
     margin: 0;
-}
-
-a {
-    color: var(--electric-blue);
-    text-decoration: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-a:hover, a:focus {
-    color: var(--light-blue);
-    text-shadow: 0 0 8px var(--electric-blue), 0 0 15px var(--light-blue);
 }
 
 /* Navigation */
@@ -68,6 +52,8 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background: var(--header-bg);
 }
 
 nav ul {
@@ -76,17 +62,38 @@ nav ul {
     margin: 0;
     display: flex;
     gap: 3rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
 }
 
 nav ul > li {
     position: relative;
-    color: var(--electric-blue);
+    cursor: pointer;
 }
 
+nav ul li a {
+    color: var(--electric-blue);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: var(--dark-gray);
+    background: var(--nav-hover);
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    box-shadow: 0 0 8px var(--electric-blue);
+}
+
+/* Dropdown-Menü */
 nav ul ul {
-    display: none;
+    display: none; /* Standardmäßig unsichtbar */
     position: absolute;
     background: var(--sub-menu-bg);
     border: 1px solid var(--sub-menu-border);
@@ -95,45 +102,101 @@ nav ul ul {
     box-shadow: 0 0 10px var(--sub-menu-border);
     top: 100%;
     left: 0;
-    z-index: 1200;
-    min-width: 180px;
+    z-index: 2000;
+    min-width: 200px; /* Mindestbreite */
+    max-width: 300px; /* Maximale Breite */
+    white-space: normal; /* Zeilenumbruch erlauben */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    visibility: hidden; /* Verhindert, dass das Dropdown sichtbar ist */
+    opacity: 0;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+/* Zeigt das Dropdown-Menü an */
 nav ul > li:hover > ul,
 nav ul ul > li:hover > ul {
-    display: block;
-}
-
-nav ul ul li {
-    position: relative;
-    padding: 10px;
-    white-space: nowrap;
-}
-
-nav ul ul li:hover, nav ul ul ul li:hover {
-    background: var(--cyan-blue);
-    color: var(--dark-gray);
-} {
-    background: var(--cyan-blue);
-    color: var(--dark-gray);
-} {
-    background: var(--nav-hover);
-}
-
-nav ul ul ul {
-    top: 0;
-    left: 100%;
-    margin-left: 5px;
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.2s ease, opacity 0.2s ease;
-}
-
-nav ul ul li:hover > ul {
+    display: block; /* Zeigt das Dropdown an */
     visibility: visible;
     opacity: 1;
 }
+
+/* Submenü (zweites Level) */
+nav ul ul ul {
+    display: none;
+    position: absolute;
+    background: var(--sub-menu-bg);
+    top: 0;
+    left: 100%; /* Positioniert rechts neben dem Eltern-Dropdown */
+    border: 1px solid var(--sub-menu-border);
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--sub-menu-border);
+    z-index: 2000;
+    min-width: 200px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Zeigt das Submenü an */
+nav ul ul li:hover > ul {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Dropdown-Inhalte */
+nav ul ul li {
+    position: relative;
+    padding: 10px;
+    white-space: normal; /* Zeilenumbruch */
+}
+
+nav ul ul li a {
+    color: var(--electric-blue);
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Hover-Effekt im Dropdown */
+nav ul ul li:hover {
+    background: var(--nav-hover);
+    color: var(--dark-gray);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    box-shadow: 0 0 8px var(--electric-blue);
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    nav ul ul {
+        position: static;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: none;
+    }
+
+    nav ul > li:hover > ul {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+    }
+}
+
 
 
 /* Hero Section */
@@ -338,6 +401,7 @@ button:hover {
     }
 }
 
+/* Responsive Navigation */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -345,7 +409,23 @@ button:hover {
         align-items: center;
     }
 
-    .hero h2 {
+    nav ul ul {
+        position: static;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: none;
+    }
+
+    nav ul > li:hover > ul {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+    }
+}
+
+.hero h2 {
         font-size: 2rem;
     }
 
@@ -353,7 +433,7 @@ button:hover {
         flex-direction: column;
         text-align: center;
     }
-}
+
 
 @media (max-width: 480px) {
     body {
