@@ -491,6 +491,23 @@ button:hover {
         width: 80px;
         height: 80px;
     }
+
+    .krankheit {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .krankheit h1 {
+        font-size: 1.5em;
+    }
+    .krankheit h2 {
+        font-size: 1.3em;
+    }
+    .krankheit h3 {
+        font-size: 1.1em;
+    }
+    .krankheit p, ul {
+        font-size: 0.9em;
+    }
 }
 
 /* Standard-Stil für .hero h2 */
