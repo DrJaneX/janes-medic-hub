@@ -317,7 +317,7 @@ section p {
     text-align: justify;
 }
 
-.first-aid, .psychiatrie-illnesses, .psychiatrie-meds, .psychiatrie-diagnose {
+.first-aid, .psychiatrie-illnesses, .psychiatrie-meds, .psychiatrie-diagnose, .psychiatrie-therapie {
     margin-top: 8rem; /* Abstand, um unter der Navbar zu liegen */
     padding-top: 2rem; /* Sicherstellen, dass der Inhalt gut sichtbar ist */
 }
