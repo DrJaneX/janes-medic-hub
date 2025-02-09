@@ -317,7 +317,7 @@ section p {
     text-align: justify;
 }
 
-.first-aid, .psychiatrie-meds {
+.first-aid, .psychiatrie-illnesses, .psychiatrie-meds {
     margin-top: 8rem; /* Abstand, um unter der Navbar zu liegen */
     padding-top: 2rem; /* Sicherstellen, dass der Inhalt gut sichtbar ist */
 }
@@ -406,6 +406,35 @@ button {
 button:hover {
     background: var(--light-blue);
     color: var(--deep-blue);
+}
+
+.krankheit {
+    background: var(--deep-blue);
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 100%px;
+    transition: transform 0.3s ease-in-out;
+    border-left: 5px solid var(--cyan-blue);
+}
+
+.krankheit h2 {
+    color: var(--light-blue);
+}
+
+.krankheit h3 {
+    color: var(--cyan-blue);
+}
+
+.krankheit ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.krankheit p {
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
 /* Responsive Design */
