@@ -268,7 +268,7 @@ nav ul li ul li a:hover {
     line-height: 1.6;
 }
 
-
+/* Section */
 section {
     margin: 2rem 0;
     padding: 2rem;
@@ -276,11 +276,6 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 25px rgba(0, 234, 255, 0.7);
 }
 
 section h2 {
@@ -322,12 +317,9 @@ section p {
     text-align: justify;
 }
 
-/* About Section */
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+.first-aid {
+    margin-top: 8rem; /* Abstand, um unter der Navbar zu liegen */
+    padding-top: 2rem; /* Sicherstellen, dass der Inhalt gut sichtbar ist */
 }
 
 /* Bild links als größerer Kreis */
