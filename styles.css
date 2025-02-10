@@ -327,7 +327,7 @@ section p {
 }
 
 .first-aid, .psychiatrie-illnesses, .psychiatrie-meds, .psychiatrie-diagnose, .psychiatrie-therapie, .radiologie-diagnose {
-    margin-top: 8rem; /* Abstand, um unter der Navbar zu liegen */
+    margin-top: calc(8rem + 5vh); /* Abstand, um unter der Navbar zu liegen */
     padding-top: 2rem; /* Sicherstellen, dass der Inhalt gut sichtbar ist */
 }
 
@@ -381,7 +381,6 @@ table {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     overflow: hidden;
-    font-family: 'Arial', sans-serif;
 }
 
 /* Grundlegendes Tabellendesign */
@@ -393,7 +392,6 @@ table {
     color: var(--table-text);
     border: 2px solid var(--table-border);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    font-family: 'Arial', sans-serif;
 }
 
 /* Spaltenüberschriften */
