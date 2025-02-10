@@ -365,32 +365,59 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 2rem 0;
-    margin-top: 1.5rem;
     background: var(--table-bg);
     color: var(--table-text);
-    border: 2px solid var(--table-border);
-    box-shadow: 0 0 10px var(--table-border);
-    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
     overflow: hidden;
+    font-family: 'Arial', sans-serif;
 }
 
-table th, table td {
-    padding: 1rem;
-    text-align: left;
-    border: 1px solid var(--table-border);
-}
-
+/* Spaltenüberschriften (th) hervorheben */
 table th {
-    background: var(--table-header-bg);
+    background: linear-gradient(135deg, var(--table-header-bg) 0%, var(--table-header-highlight) 100%);
     color: var(--table-header-text);
     text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 0.07em;
+    font-size: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 3px solid var(--table-border);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-table tr:hover {
-    background: var(--table-hover-bg);
-    transition: background 0.3s ease;
+/* Zellen-Design für besseren Lesefluss */
+table td {
+    font-size: 1rem;
+    padding: 1.2rem;
+    border-bottom: 1px solid var(--table-border);
 }
+
+/* Letzte Zeile ohne untere Linie */
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Abgerundete Ecken für einen weicheren Look */
+table th:first-child, table td:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+table th:last-child, table td:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+/* Responsive Optimierung für kleine Bildschirme */
+@media (max-width: 768px) {
+    table th, table td {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+
 button {
     background: var(--button-bg);
     color: var(--button-text);
