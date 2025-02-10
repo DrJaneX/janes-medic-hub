@@ -326,7 +326,7 @@ section p {
     text-align: justify;
 }
 
-.first-aid, .psychiatrie-illnesses, .psychiatrie-meds, .psychiatrie-diagnose, .psychiatrie-therapie, .radiologie-diagnose {
+.first-aid, .psychiatrie-illnesses, .psychiatrie-meds, .psychiatrie-diagnose, .psychiatrie-therapie, .radiologie-diagnose, .neurologie-krankheit {
     margin-top: calc(8rem + 5vh); /* Abstand, um unter der Navbar zu liegen */
     padding-top: 2rem; /* Sicherstellen, dass der Inhalt gut sichtbar ist */
 }
@@ -475,7 +475,7 @@ button:hover {
 }
 
 .krankheit ul {
-    list-style-type: square;
+    list-style-type: none;
     padding-left: 20px;
 }
 
@@ -483,6 +483,17 @@ button:hover {
     line-height: 1.6;
     color: var(--text-color);
 }
+
+/*NEUROLOGIE*/
+.neurologie-krankheit {
+    .neurologie-krankheit {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
 
 /* Responsive Design */
 @media (max-width: 1200px) {
