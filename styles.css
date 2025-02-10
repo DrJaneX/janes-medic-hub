@@ -11,13 +11,14 @@
     --nav-hover: #39d2ff;
     --sub-menu-bg: #001f3f;
     --sub-menu-border: #00eaff;
-    --table-bg: var(--dark-gray);
-    --table-text: var(--text-color);
-    --table-border: var(--header-border);
-    --table-header-bg: var(--header-bg);
-    --table-header-text: var(--text-color);
-    --table-row-bg: var(--sub-menu-bg);
-    --table-alt-row-bg: rgba(255, 255, 255, 0.05);
+        --table-bg: var(--dark-gray);
+        --table-text: var(--text-color);
+        --table-border: var(--header-border);
+        --table-header-bg: var(--header-bg);
+        --table-header-text: var(--text-color);
+        --table-row-bg: var(--deep-blue); /* Dunkleres Blau */
+        --table-alt-row-bg: var(--cyan-blue); /* Helleres Blau */
+
 
 }
 
@@ -369,16 +370,6 @@ input, textarea {
     border-radius: 5px;
 }
 
-:root {
-    --table-bg: var(--dark-gray);
-    --table-text: var(--text-color);
-    --table-border: var(--header-border);
-    --table-header-bg: var(--header-bg);
-    --table-header-text: var(--text-color);
-    --table-row-bg: var(--deep-blue); /* Dunkleres Blau */
-    --table-alt-row-bg: var(--cyan-blue); /* Helleres Blau */
-}
-
 /* Grundlegendes Tabellendesign */
 table {
     width: 100%;
@@ -390,6 +381,18 @@ table {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Grundlegendes Tabellendesign */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: var(--table-bg);
+    color: var(--table-text);
+    border: 2px solid var(--table-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     font-family: 'Arial', sans-serif;
 }
 
@@ -429,15 +432,6 @@ table tr:last-child td {
     border-bottom: none;
 }
 
-/* Abgerundete Ecken */
-table th:first-child, table td:first-child {
-    border-radius: 10px 0 0 10px;
-}
-
-table th:last-child, table td:last-child {
-    border-radius: 0 10px 10px 0;
-}
-
 /* Optimierung für mobile Geräte */
 @media (max-width: 768px) {
     table th, table td {
@@ -445,8 +439,6 @@ table th:last-child, table td:last-child {
         font-size: 0.9rem;
     }
 }
-
-
 
 button {
     background: var(--button-bg);
