@@ -11,6 +11,14 @@
     --nav-hover: #39d2ff;
     --sub-menu-bg: #001f3f;
     --sub-menu-border: #00eaff;
+    --table-bg: var(--dark-gray);
+    --table-text: var(--text-color);
+    --table-border: var(--header-border);
+    --table-header-bg: var(--header-bg);
+    --table-header-text: var(--text-color);
+    --table-row-bg: var(--sub-menu-bg);
+    --table-alt-row-bg: rgba(255, 255, 255, 0.05);
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap');
@@ -361,22 +369,33 @@ input, textarea {
     border-radius: 5px;
 }
 
+:root {
+    --table-bg: var(--dark-gray);
+    --table-text: var(--text-color);
+    --table-border: var(--header-border);
+    --table-header-bg: var(--header-bg);
+    --table-header-text: var(--text-color);
+    --table-row-bg: var(--deep-blue); /* Dunkleres Blau */
+    --table-alt-row-bg: var(--cyan-blue); /* Helleres Blau */
+}
+
+/* Grundlegendes Tabellendesign */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 2rem 0;
     background: var(--table-bg);
     color: var(--table-text);
-    border: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border: 2px solid var(--table-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     overflow: hidden;
     font-family: 'Arial', sans-serif;
 }
 
-/* Spaltenüberschriften (th) hervorheben */
+/* Spaltenüberschriften */
 table th {
-    background: linear-gradient(135deg, var(--table-header-bg) 0%, var(--table-header-highlight) 100%);
+    background: var(--table-header-bg);
     color: var(--table-header-text);
     text-transform: uppercase;
     font-weight: bold;
@@ -385,14 +404,24 @@ table th {
     padding: 1.5rem;
     text-align: left;
     border-bottom: 3px solid var(--table-border);
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.1);
 }
 
-/* Zellen-Design für besseren Lesefluss */
+/* Tabellenzellen */
 table td {
     font-size: 1rem;
     padding: 1.2rem;
     border-bottom: 1px solid var(--table-border);
+}
+
+/* Wechselnde Zeilenfarben mit Blautönen */
+table tr:nth-child(odd) {
+    background: var(--table-row-bg);
+}
+
+table tr:nth-child(even) {
+    background: var(--table-alt-row-bg);
+    color: var(--dark-gray); /* Kontrast für bessere Lesbarkeit */
 }
 
 /* Letzte Zeile ohne untere Linie */
@@ -400,7 +429,7 @@ table tr:last-child td {
     border-bottom: none;
 }
 
-/* Abgerundete Ecken für einen weicheren Look */
+/* Abgerundete Ecken */
 table th:first-child, table td:first-child {
     border-radius: 10px 0 0 10px;
 }
@@ -409,13 +438,14 @@ table th:last-child, table td:last-child {
     border-radius: 0 10px 10px 0;
 }
 
-/* Responsive Optimierung für kleine Bildschirme */
+/* Optimierung für mobile Geräte */
 @media (max-width: 768px) {
     table th, table td {
         padding: 1rem;
         font-size: 0.9rem;
     }
 }
+
 
 
 button {
