@@ -326,7 +326,7 @@ section p {
     text-align: justify;
 }
 
-.first-aid, .psychiatrie-illnesses, .psychiatrie-meds, .psychiatrie-diagnose, .psychiatrie-therapie, .radiologie-diagnose, .neurologie-krankheit, .neurologie-medikamente, .neurologie-geraete {
+.first-aid, .psychiatrie-illnesses, .psychiatrie-meds, .psychiatrie-diagnose, .psychiatrie-therapie, .radiologie-diagnose, .neurologie-krankheit, .neurologie-medikamente, .neurologie-geraete, .chirurgie-krankheit {
     margin-top: calc(8rem + 5vh); /* Abstand, um unter der Navbar zu liegen */
     padding-top: 2rem; /* Sicherstellen, dass der Inhalt gut sichtbar ist */
 }
@@ -457,7 +457,7 @@ button:hover {
 
 .krankheit {
     background: var(--deep-blue);
-    margin: 20px auto;
+    margin: 50px auto;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -482,16 +482,6 @@ button:hover {
 .krankheit p {
     line-height: 1.6;
     color: var(--text-color);
-}
-
-/*NEUROLOGIE*/
-.neurologie-krankheit {
-    .neurologie-krankheit {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
 }
 
 
