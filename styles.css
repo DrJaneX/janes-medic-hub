@@ -326,7 +326,7 @@ section p {
     text-align: justify;
 }
 
-.first-aid, .psychiatrie-illnesses, .psychiatrie-meds, .psychiatrie-diagnose, .psychiatrie-therapie, .radiologie-diagnose, .neurologie-krankheit, .neurologie-medikamente, .neurologie-geraete, .chirurgie-krankheit, .chirurgie-meds {
+.first-aid, .psychiatrie-illnesses, .psychiatrie-meds, .psychiatrie-diagnose, .psychiatrie-therapie, .radiologie-diagnose, .neurologie-krankheit, .neurologie-medikamente, .neurologie-geraete, .chirurgie-krankheit, .chirurgie-meds, .orthopaedie-krankheit {
     margin-top: calc(8rem + 5vh); /* Abstand, um unter der Navbar zu liegen */
     padding-top: 2rem; /* Sicherstellen, dass der Inhalt gut sichtbar ist */
 }
